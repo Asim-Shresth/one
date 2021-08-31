@@ -1,0 +1,207 @@
+:root{
+    --primary-pale:hsl(225, 100%, 94%);
+    --primary-bright:hsl(245, 75%, 52%);
+
+    --neutral-pale:hsl(225, 100%, 98%);
+    --neutral-desaturated:hsl(224, 23%, 55%);
+    --neutral-dark:hsl(223, 47%, 23%);
+}
+
+*,
+*::before,
+*::after{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family:'Red Hat Display', sans-seriff ;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+body{
+   background-image: url(images/pattern-background-desktop.svg);
+   background-repeat: no-repeat;
+   background-size: contain;
+   background-color: var(--primary-pale);
+   position: relative;
+   min-height: 100vh;
+}
+
+.container{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    background-color: white;
+    max-width: 450px;
+    border-radius: 13px;
+    overflow: hidden;
+    box-shadow: 5px 10px 18px #888888;
+}
+
+.content{
+    padding: 6%;
+}
+
+.summary{
+    text-align: center;
+}
+
+.summary-title{
+    color: var(--neutral-dark);
+    font-weight: 900;
+    font-size: 25px;
+    padding-bottom: 3%;
+}
+
+.summary-description{
+    color: var(--neutral-desaturated);
+    max-width: 80%;
+    margin: 0 auto;
+    padding-bottom: 6px;
+}
+
+.plan{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--neutral-pale);
+    margin: 4% auto;
+    padding: 18px;
+    border-radius: 12px;
+}
+
+.plan article{
+    display: flex;
+    align-items: center;
+    text-align: left;
+}
+
+.plan article div{
+    margin-left: 22px;
+}
+
+.plan-title{
+    color: var(--neutral-dark);
+    font-size: 20px;
+    font-weight: 900;
+}
+
+.plan-description{
+    color: var(--neutral-desaturated);
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.change-btn{
+    font-weight: 700;
+    transition: ease-in 0.3s ;
+}
+
+.change-btn:hover{
+    opacity: 0.7;
+}
+
+.button{
+    display: flex;
+    flex-direction: column;
+}
+
+.proceed-btn{
+    font-weight: 700;
+    color: white;
+    background-color: var(--primary-bright);
+    margin: 10px 0;
+    padding: 10px 0;
+    box-shadow: 5px 10px 18px #888888;
+    border: none;
+    outline: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition:.3s ease;
+}
+
+.proceed-btn:hover{
+    opacity: 0.8;
+}
+
+.cancel-btn{
+    font-weight: 700;
+    background-color: transparent;
+    color: var(--neutral-desaturated);
+    margin-top: 14px;
+    cursor: pointer;
+    border: none;
+    transition:.3s ease;
+}
+
+.cancel-btn:hover{
+    color: var(--neutral-dark);
+}
+
+
+@media only screen and (max-width: 425px) {
+    body {
+        background-image: url(/images/pattern-background-mobile.svg);
+    }
+
+    .container {
+        max-width: 87%;
+        min-height: 500px;
+    }
+
+    .content{
+        padding: 4% 9%;
+    }    
+
+    
+    .summary-title {
+        font-size: 18px;
+        padding-bottom: 4%;
+    }
+
+    .summary-description{
+        max-width: 100%;
+        font-size: 14px;
+    }
+
+
+    .plan{
+        margin: 8% auto;
+        padding: 10px;
+    }
+
+    .plan article {
+        margin-left: 10px;
+    }
+
+    .plan article img{
+        max-height: 40px;
+    }
+
+    .plan-title{
+        font-size: 14px;
+    }
+
+    .plan-description{
+        font-size: 14px;
+    }
+
+    .change-btn{
+        font-size: 14px;
+        font-weight: 700;
+    }
+
+    .proceed-btn{
+        font-weight: 700;
+        font-size: 14px;
+        margin: 1.5% 0;
+        padding:10px;
+    }
+
+    .cancel-btn{
+        font-size: 14px;
+        padding: 4% 0;
+    }
+}
+
